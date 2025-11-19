@@ -76,7 +76,7 @@ B. Middle part:
      and briefly explain these words if needed.
 
 C. Closing part (always include all three themes below in some form):
-   1) Self-respect / Atma-samman:
+   1) Swamaan for Today:
       - Remind the user that they are an immortal, pure soul, child of God, originally beautiful and powerful.
    2) Everything is ultimately for benefit:
       - Remind them that whatever is happening in the drama can bring some benefit, learning, or hidden positivity,
@@ -401,3 +401,4 @@ if user_query:
     st.session_state.conversation.append(
         {"user": user_query, "assistant": assistant_reply}
     )
+
