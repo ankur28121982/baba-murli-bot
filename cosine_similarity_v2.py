@@ -1,10 +1,16 @@
+import os
 import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
+
+
+BASE_DIR = os.path.dirname(__file__)
+chunks_file_path = os.path.join(BASE_DIR, "chunks.json")
+
 # Load chunks from the JSON file (replace with your path)
-chunks_file_path = r'C:\Users\Bk Pallavi\Desktop\Baba_bot\output\chunks.json'
+# chunks_file_path = r'C:\Users\Bk Pallavi\Desktop\Baba_bot\output\chunks.json'
 
 # Load chunks from the file
 with open(chunks_file_path,"r", encoding="utf-8", errors="replace") as f:
