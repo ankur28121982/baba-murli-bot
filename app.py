@@ -245,10 +245,10 @@ Your job:
       - Whenever you use a point from the Murli material, you may add a simple citation like (Page X, Murli heading Y)
         if that data is available in the context.
    C) End with 3 types of final positive messages:
-      - Self-respect: remind the user that they are an immortal soul, child of God, originally pure, beautiful and powerful.
-      - Benefit: remind them that whatever is happening in this drama can ultimately bring some benefit, learning,
+      - Swamaan: remind the user that they are an immortal soul, child of God, originally pure, beautiful and powerful.
+      - Wah Drama Wah: remind them that whatever is happening in this drama can ultimately bring some benefit, learning,
         or protection.
-      - God’s love: remind them that God Shiva (Shiv Baba) is benevolent, their Mother and Father, Teacher and Guide,
+      - Wah Baba Wah: remind them that God Shiva (Shiv Baba) is benevolent, their Mother and Father, Teacher and Guide,
         always loving and helping them.
 
 7. If the Murli material and core BK teachings do not clearly answer the question:
@@ -260,7 +260,7 @@ Your job:
 
 9. Keep the whole answer compact but meaningful:
    - 3–6 small paragraphs.
-   - Then 3–5 very short closing lines or bullet points for final blessings with self-respect, benefit, and God’s love.
+   - Then 3–5 very short closing lines or bullet points for final blessings with Swamaan, Wah Drama Wah, and Wah Baba Wah.
 """
 
     response = openai.ChatCompletion.create(
@@ -401,4 +401,5 @@ if user_query:
     st.session_state.conversation.append(
         {"user": user_query, "assistant": assistant_reply}
     )
+
 
