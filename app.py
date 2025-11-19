@@ -260,7 +260,7 @@ Your job:
 
 9. Keep the whole answer compact but meaningful:
    - 3–6 small paragraphs.
-   - Then 3–5 very short closing lines or bullet points for final blessings with Swamaan, Wah Drama Wah, and Wah Baba Wah.
+   - Then 3–5 very short closing lines or bullet points for final blessings with Swamaan (about self esteem and respect), Wah Drama Wah (everything happens for good), and Wah Baba Wah (God is beautiful).
 """
 
     response = openai.ChatCompletion.create(
@@ -408,3 +408,4 @@ if user_query:
     st.session_state.conversation.append(
         {"user": user_query, "assistant": assistant_reply}
     )
+
