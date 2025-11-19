@@ -386,20 +386,25 @@ if user_query:
             st.write(preview + ("..." if len(ch.get("content", "")) > 200 else ""))
 
     # ---- Step 3: LLM: generate answer using history + chunks ----
-    assistant_reply = generate_openai_response(
-        query=user_query,                 # ORIGINAL user language
-        top_chunks=top_chunks,            # Murli chunks
-        history=st.session_state.conversation,
-        persona_name=persona_name,
-    )
-
-    # Show assistant reply
+    
+    
+        # ---- Step 3: LLM: generate answer using history + chunks ----
     with st.chat_message("assistant"):
+        with st.spinner(
+            "Om Shanti, pyare atma… Jab tak Baba ka sandesh aa raha hai, "
+            "thodi der ‘Mera Baba, mitha Baba, pyara Shiv Baba’ ko yaad karein."
+        ):
+            assistant_reply = generate_openai_response(
+                query=user_query,                 # ORIGINAL user language
+                top_chunks=top_chunks,            # English Murli chunks
+                history=st.session_state.conversation,
+                persona_name=persona_name,
+            )
+
+        # When done, show Baba’s answer
         st.markdown(assistant_reply)
 
     # Save to conversation history (for multi-turn)
     st.session_state.conversation.append(
         {"user": user_query, "assistant": assistant_reply}
     )
-
-
