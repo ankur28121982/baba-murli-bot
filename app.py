@@ -266,7 +266,7 @@ Your job:
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         temperature=0.3,
-        max_tokens=900,  # a bit more room for deeper explanation
+        max_tokens=500,  # a bit more room for deeper explanation
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -408,4 +408,5 @@ if user_query:
     st.session_state.conversation.append(
         {"user": user_query, "assistant": assistant_reply}
     )
+
 
